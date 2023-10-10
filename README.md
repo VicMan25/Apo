@@ -83,3 +83,6 @@ Este proyecto tiene la licencia MIT; consulte el archivo LICENSE.md para obtener
 * Un consejo para cualquiera cuyo código se haya utilizado
 * Inspiración
 * etc
+
+
+Esto fue agregado por Victor el dia 10/10/23
