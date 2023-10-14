@@ -245,3 +245,23 @@ public class TablaDeMultiplicar {
         return tabla.toString();
     }
 }
+
+public class Consecutivos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x1 = 0;
+		int x2 = 1;
+		int x3 = 20;
+		
+		for (int i=0; i<=x3; i++) {
+		int secuencia = x1 + x2;
+		
+		System.out.print("La secuencia es:" + secuencia + "\n");
+	    
+	    x1 = x2;
+	    x2 = secuencia;
+	}
+}
+}
