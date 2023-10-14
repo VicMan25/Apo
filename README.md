@@ -222,5 +222,30 @@ public class HolaMundo {
         System.out.println("Hola, mundo");
     }
 }
+****************************************************************************************************
+import javax.swing.JOptionPane;
+
+public class SumaDosNumeros {
+    public static void main(String[] args) {
+        // Solicitar al usuario que ingrese el primer número
+        String input1 = JOptionPane.showInputDialog("Ingresa el primer número:");
+        
+        // Convertir la entrada del usuario a un número entero
+        int numero1 = Integer.parseInt(input1);
+
+        // Solicitar al usuario que ingrese el segundo número
+        String input2 = JOptionPane.showInputDialog("Ingresa el segundo número:");
+
+        // Convertir la entrada del usuario a un número entero
+        int numero2 = Integer.parseInt(input2);
+
+        // Calcular la suma de los dos números
+        int suma = numero1 + numero2;
+
+        // Mostrar el resultado en un cuadro de diálogo
+        JOptionPane.showMessageDialog(null, "La suma es: " + suma);
+    }
+}
+
 
 
