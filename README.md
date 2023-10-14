@@ -259,3 +259,151 @@ public class Consecutivos {
 	}
 }
 }
+import java.util.Scanner;
+
+public class PromedioNotas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingresa la primera nota: ");
+        double nota1 = scanner.nextDouble();
+        
+        System.out.println("Ingresa la segunda nota: ");
+        double nota2 = scanner.nextDouble();
+        
+        System.out.println("Ingresa la tercera nota: ");
+        double nota3 = scanner.nextDouble();
+        
+        // Calcula el promedio
+        double promedio = (nota1 + nota2 + nota3) / 3.0;
+        
+        System.out.println("El promedio de las tres notas es: " + promedio);
+        
+        scanner.close(); // Cerrar el Scanner al finalizar
+    }
+}
+
+public class AnalisisNumeros {
+    public static void main(String[] args) {
+        int cantidadNumeros = 5;
+        int[] numeros = new int[cantidadNumeros];
+
+        // Solicitar al usuario que ingrese 5 números
+        for (int i = 0; i < cantidadNumeros; i++) {
+            String input = JOptionPane.showInputDialog("Ingresa el número #" + (i + 1) + ":");
+            numeros[i] = Integer.parseInt(input);
+        }
+
+        // Encontrar el número más grande y el número más pequeño
+        int maximo = numeros[0];
+        int minimo = numeros[0];
+        int suma = 0;
+
+        for (int i = 0; i < cantidadNumeros; i++) {
+            suma += numeros[i];
+            if (numeros[i] > maximo) {
+                maximo = numeros[i];
+            }
+            if (numeros[i] < minimo) {
+                minimo = numeros[i];
+            }
+        }
+
+        // Calcular el promedio
+        double promedio = (double) suma / cantidadNumeros;
+
+        // Mostrar los resultados en un cuadro de diálogo
+        String resultado = "Número más grande: " + maximo + "\n" +
+                           "Número más pequeño: " + minimo + "\n" +
+                           "Promedio: " + promedio;
+        JOptionPane.showMessageDialog(null, resultado);
+	}	
+}
+
+public class Menu_Parcial_C1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner (System.in);
+			int opcion=0;
+while(opcion!=3) {
+		System.out.print("Bienvenido al menú\n");
+		
+		System.out.print("Selecciona la opción a realizar \n");
+		System.out.print("Opción 1: Pedir números hasta que sea 0 y sumarlos \n");
+		System.out.print("Opción 2: Pedir 10 números y promediarlos \n");
+		System.out.print("Opción 3: Salir \n");
+		opcion=sc.nextInt();
+	switch (opcion) {
+	case 1:
+		System.out.print("Ingresa diferentes números, para sumarlos digita 0: \n");
+		int numeros = 1;
+		int suma= 0;
+	while (numeros !=0) {
+		System.out.print("Ingresa un número: \n");
+		numeros=sc.nextInt();
+		suma=suma+numeros;
+		}
+	System.out.print("El total de la suma es:" + suma +"\n");
+	break;
+	case 2:
+		System.out.print("Ingresa 10 números para promediarlos: \n");
+		double promedio=0;
+		for (int i=0; i<10; i++) {
+		System.out.print("Ingresa un número: \n");
+		double nume=0;
+		nume=sc.nextInt();
+		promedio=promedio+nume;
+		}
+		System.out.print("El promedio es:" + promedio/10 +"\n");
+	break;
+	default: 
+		System.out.print("Gracias por usar este menú \n");
+	}
+	}
+	}
+}
+
+import javax.swing.JOptionPane;
+
+public class PuntuacionPartidos {
+    public static void main(String[] args) {
+        String ganadosInput = JOptionPane.showInputDialog("Partidos ganados:");
+        int ganados = Integer.parseInt(ganadosInput);
+
+        String empatadosInput = JOptionPane.showInputDialog("Partidos empatados:");
+        int empatados = Integer.parseInt(empatadosInput);
+
+        String perdidosInput = JOptionPane.showInputDialog("Partidos perdidos:");
+        int perdidos = Integer.parseInt(perdidosInput);
+
+        int puntosGanados = ganados * 5;
+        int puntosEmpatados = empatados * 3;
+        int puntosPerdidos = perdidos * 2;
+
+        int totalPuntos = puntosGanados + puntosEmpatados - puntosPerdidos;
+
+        String resultado = "Puntos ganados: " + puntosGanados + "\n"
+                + "Puntos empatados: " + puntosEmpatados + "\n"
+                + "Puntos perdidos: " + puntosPerdidos + "\n"
+                + "Puntuación total: " + totalPuntos;
+
+        JOptionPane.showMessageDialog(null, resultado, "Puntuación de Partidos", JOptionPane.INFORMATION_MESSAGE);
+    }
+}
+
+import javax.swing.JOptionPane;
+
+public class ProductoNumeros {
+    public static void main(String[] args) {
+        String input1 = JOptionPane.showInputDialog("Ingresa el primer número:");
+        double numero1 = Double.parseDouble(input1);
+
+        String input2 = JOptionPane.showInputDialog("Ingresa el segundo número:");
+        double numero2 = Double.parseDouble(input2);
+
+        double producto = numero1 * numero2;
+
+        JOptionPane.showMessageDialog(null, "El producto de los números es: " + producto);
+    }
+}
