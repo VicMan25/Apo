@@ -472,3 +472,74 @@ public class Contenedora1 {
 		JOptionPane.showMessageDialog(null, "Aprobaste, tu promedio es: "+promedio,"Promedio", 15);
 	}
 }
+***************************************************************************
+Menu Con While
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	Scanner sc = new Scanner (System.in);
+		byte opcion=0;
+		
+while(opcion!=6) {
+	
+	System.out.print("Ingresa tu función a realizar:\n Opción 1: Conversor de pesos\n Opción 2: Promedio de notas \n Opción 3: Clasificación de equipos \n Opción 4: Número Par o Impar\n");
+	opcion=sc.nextByte();
+switch (opcion) {
+case 1:
+	System.out.print("Ingresa el valor en pesos a convertir en dolares: \n");
+	Scanner sc1= new Scanner (System.in);
+	double pesos=sc1.nextDouble();
+	double dolares=0;
+	dolares=(pesos/4150);
+	System.out.print("El valor en dolares es: "+dolares);
+break;
+
+case 2:
+	System.out.print("Ingrese la nota 1 \n");
+	Scanner sc2= new Scanner (System.in);
+	float nota1=sc2.nextFloat();
+	System.out.print("Ingrese la nota 2 \n");
+	Scanner sc3= new Scanner (System.in);
+	float nota2=sc3.nextFloat();
+	System.out.print("Ingrese la nota 3 \n");
+	Scanner sc4= new Scanner (System.in);
+	float nota3=sc4.nextFloat();
+	double promedio=0;
+	promedio=(nota1+nota2+nota3)/3;
+	System.out.print("El promedio del estudiante es"+ promedio);
+break;
+	
+case 3:
+	System.out.print("Ingresa el número de partidos ganados \n");
+	Scanner sc5= new Scanner (System.in);
+	float pGanados=sc5.nextFloat();
+	System.out.print("Ingresa el número de partidos empatados \n");
+	Scanner sc6= new Scanner (System.in);
+	float pEmpatados=sc6.nextFloat();
+	int totalPuntos=0;
+	totalPuntos=(int) ((pGanados*3)+(pEmpatados*1));
+	System.out.print("El total de puntos del equipo son "+ totalPuntos);
+break;
+
+case 4:
+	System.out.print("Ingresa tu número para saber si es par, impar o 0 \n ");
+	Scanner sc7= new Scanner (System.in);
+	int numero=sc7.nextInt();
+	if (numero==0) {
+		System.out.print("El número es 0 \n");
+		}
+	else if (numero%2==0) {
+	System.out.print("Es par \n");	}
+	else {
+	System.out.print("Es impar \n");}
+break;
+
+case 5:
+	System.out.print("Gracias por usar este menú \n ");
+
+default: 
+	System.out.print("Este número no es valido \n");
+}
+}
+}
+
