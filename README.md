@@ -265,3 +265,50 @@ public class Consecutivos {
 	}
 }
 }
+****************************************************************
+Codigo de Factorial Con Try and Catch
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	int opcion = 0;	
+	
+while(opcion!=2) {
+try {
+	opcion=Integer.parseInt(JOptionPane.showInputDialog(null, "Selecciona la opción a realizar \n Opción 1: Factorial \n Opción 2: Salir \n","Bienvenido al menú",1));
+}
+catch(NumberFormatException e){
+	JOptionPane.showMessageDialog(null, "Elige entre 1 y 2\n", null, 1);
+}
+	switch (opcion) {
+	case 1:
+	try {
+	int x=Integer.parseInt(JOptionPane.showInputDialog(null, "Escribe un número: \n"));
+	if (x>=0) {
+		int x1=calcularFactorial(x);
+		
+				JOptionPane.showMessageDialog(null, "El valor factorial de "+ x + " es: "+ x1 + "\n", null, 1);
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "El valor factorial de "+ x + " no es posible de calcular \n", null, 1);
+			}
+			}catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Ingresa un número entero", null, 0);
+			}
+			break;
+			case 2:
+				JOptionPane.showMessageDialog(null, "Gracias por usar este menú \n", null, 1);
+			break;
+			default: 
+			JOptionPane.showMessageDialog(null, "Opción invalida \n", null, 0);
+			}
+		}
+
+	}
+	public static int calcularFactorial (int x) {
+		int factorial = 1;
+		for (int i = 1; i <= x; i++) {
+	    factorial *= i;
+	    }
+		return factorial;
+	}
+}
