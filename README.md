@@ -400,3 +400,16 @@ public class Condicional {
 		}
 	}
 }
+********************************************************************
+Uso del JOp
+public class Main {
+	public static void main(String[]args)
+	{
+		String mensaje = JOptionPane.showInputDialog(null, "Introduce tu nombre");
+		// Para recibir números se tiene que tranformar el tipo de variable a entero.
+		// 
+		int suma=0;
+		int suma1=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el primer número"));
+		JOptionPane.showMessageDialog(null, mensaje,"Se acabo tu tiempo", 0);
+	}
+}
