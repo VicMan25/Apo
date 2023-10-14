@@ -289,3 +289,40 @@ public class PromedioNotas {
         scanner.close(); // Cerrar el Scanner al finalizar
     }
 }
+
+public class AnalisisNumeros {
+    public static void main(String[] args) {
+        int cantidadNumeros = 5;
+        int[] numeros = new int[cantidadNumeros];
+
+        // Solicitar al usuario que ingrese 5 números
+        for (int i = 0; i < cantidadNumeros; i++) {
+            String input = JOptionPane.showInputDialog("Ingresa el número #" + (i + 1) + ":");
+            numeros[i] = Integer.parseInt(input);
+        }
+
+        // Encontrar el número más grande y el número más pequeño
+        int maximo = numeros[0];
+        int minimo = numeros[0];
+        int suma = 0;
+
+        for (int i = 0; i < cantidadNumeros; i++) {
+            suma += numeros[i];
+            if (numeros[i] > maximo) {
+                maximo = numeros[i];
+            }
+            if (numeros[i] < minimo) {
+                minimo = numeros[i];
+            }
+        }
+
+        // Calcular el promedio
+        double promedio = (double) suma / cantidadNumeros;
+
+        // Mostrar los resultados en un cuadro de diálogo
+        String resultado = "Número más grande: " + maximo + "\n" +
+                           "Número más pequeño: " + minimo + "\n" +
+                           "Promedio: " + promedio;
+        JOptionPane.showMessageDialog(null, resultado);
+	}	
+}
