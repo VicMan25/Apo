@@ -223,3 +223,25 @@ public class CalculadoraSimple {
         JOptionPane.showMessageDialog(null, "La suma es: " + resultado);
     }
 } 
+
+import javax.swing.JOptionPane;
+
+public class TablaDeMultiplicar {
+    public static void main(String[] args) {
+        String input = JOptionPane.showInputDialog("Ingresa un número para obtener su tabla de multiplicar:");
+        int numero = Integer.parseInt(input);
+
+        String tabla = generarTablaDeMultiplicar(numero);
+
+        JOptionPane.showMessageDialog(null, tabla, "Tabla de Multiplicar de " + numero, JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public static String generarTablaDeMultiplicar(int numero) {
+        StringBuilder tabla = new StringBuilder();
+        for (int i = 1; i <= 10; i++) {
+            int resultado = numero * i;
+            tabla.append(numero).append(" x ").append(i).append(" = ").append(resultado).append("\n");
+        }
+        return tabla.toString();
+    }
+}
