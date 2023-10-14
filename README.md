@@ -366,3 +366,18 @@ while(x <= 10) {
 }
 }
 }
+*********************************************************************
+Conversor De Pesos a Dolares
+public class Conversor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.print("Ingresa el valor en pesos a convertir en dolares:");
+		Scanner sc= new Scanner (System.in);
+		double pesos=sc.nextDouble();
+		
+		double dolares=0;
+		dolares=(pesos/4150);
+		System.out.print("El valor en dolares es: "+dolares);
+	}
+}
