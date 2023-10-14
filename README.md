@@ -347,3 +347,22 @@ public class Taller {
 	}
 
 }
+*********************************************************
+Tabla con While
+public class Tabla {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.print("¿Necesitas la tabla del número? \n");
+		Scanner sc = new Scanner (System.in);
+		int numero=sc.nextInt();
+		int x=1;
+		
+while(x <= 10) {
+	int resultado= numero*x;
+	System.out.print(numero + " x " + x + " = " + resultado + "\n");
+	x++;
+}
+}
+}
