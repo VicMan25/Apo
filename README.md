@@ -413,3 +413,36 @@ public class Main {
 		JOptionPane.showMessageDialog(null, mensaje,"Se acabo tu tiempo", 0);
 	}
 }
+**************************************************************************
+Uso de las Funciones
+public class Funciones {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double x=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el primer número"));
+		double y=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el segundo número"));
+		
+		double x1=suma(x,y);
+		double x2=resta(x,y);
+		double x3=multiplicacion(x,y);
+		double x4=division(x,y);
+		JOptionPane.showMessageDialog(null,"Suma es igual a: "+x1+ "\n","Resultado",1);
+		JOptionPane.showMessageDialog(null,"Resta es igual a: "+x2+ "\n","Resultado",1);
+		JOptionPane.showMessageDialog(null,"Multiplicación es igual a: "+x3+ "\n","Resultado",1);
+		JOptionPane.showMessageDialog(null,"División es igual a: "+x4+ "\n","Resultado",1);
+	}
+	
+	public static double suma (double a, double b) {
+			return a+b;
+	}
+	public static double resta (double a, double b) {
+			return a-b;
+	}
+	public static double multiplicacion (double a, double b) {
+		return a*b;
+	}
+	public static double division (double a, double b) {
+		return a/b;
+	}
+}
