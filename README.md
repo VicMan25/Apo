@@ -398,3 +398,19 @@ public class PuntuacionPartidos {
         JOptionPane.showMessageDialog(null, resultado, "Puntuación de Partidos", JOptionPane.INFORMATION_MESSAGE);
     }
 }
+
+import javax.swing.JOptionPane;
+
+public class ProductoNumeros {
+    public static void main(String[] args) {
+        String input1 = JOptionPane.showInputDialog("Ingresa el primer número:");
+        double numero1 = Double.parseDouble(input1);
+
+        String input2 = JOptionPane.showInputDialog("Ingresa el segundo número:");
+        double numero2 = Double.parseDouble(input2);
+
+        double producto = numero1 * numero2;
+
+        JOptionPane.showMessageDialog(null, "El producto de los números es: " + producto);
+    }
+}
