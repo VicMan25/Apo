@@ -246,6 +246,36 @@ public class SumaDosNumeros {
         JOptionPane.showMessageDialog(null, "La suma es: " + suma);
     }
 }
+********************************************************************************************************
+import javax.swing.JOptionPane;
+
+public class FactorialNumero {
+    public static void main(String[] args) {
+        // Solicitar al usuario que ingrese un número
+        String input = JOptionPane.showInputDialog("Ingresa un número:");
+
+        // Convertir la entrada del usuario a un número entero
+        int numero = Integer.parseInt(input);
+
+        // Calcular el factorial del número
+        long factorial = calcularFactorial(numero);
+
+        // Mostrar el resultado en un cuadro de diálogo
+        JOptionPane.showMessageDialog(null, "El factorial de " + numero + " es " + factorial);
+    }
+
+    public static long calcularFactorial(int n) {
+        if (n < 0) {
+            return -1; // Manejar números negativos como un caso especial
+        }
+        long factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+}
+
 
 
 
