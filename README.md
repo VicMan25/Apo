@@ -370,3 +370,31 @@ while(opcion!=3) {
 	}
 	}
 }
+
+import javax.swing.JOptionPane;
+
+public class PuntuacionPartidos {
+    public static void main(String[] args) {
+        String ganadosInput = JOptionPane.showInputDialog("Partidos ganados:");
+        int ganados = Integer.parseInt(ganadosInput);
+
+        String empatadosInput = JOptionPane.showInputDialog("Partidos empatados:");
+        int empatados = Integer.parseInt(empatadosInput);
+
+        String perdidosInput = JOptionPane.showInputDialog("Partidos perdidos:");
+        int perdidos = Integer.parseInt(perdidosInput);
+
+        int puntosGanados = ganados * 5;
+        int puntosEmpatados = empatados * 3;
+        int puntosPerdidos = perdidos * 2;
+
+        int totalPuntos = puntosGanados + puntosEmpatados - puntosPerdidos;
+
+        String resultado = "Puntos ganados: " + puntosGanados + "\n"
+                + "Puntos empatados: " + puntosEmpatados + "\n"
+                + "Puntos perdidos: " + puntosPerdidos + "\n"
+                + "Puntuación total: " + totalPuntos;
+
+        JOptionPane.showMessageDialog(null, resultado, "Puntuación de Partidos", JOptionPane.INFORMATION_MESSAGE);
+    }
+}
