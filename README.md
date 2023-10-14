@@ -207,3 +207,19 @@ for (int i=0; i<=10; i++) {
 }
 	}
 }
+
+import javax.swing.JOptionPane;
+
+public class CalculadoraSimple {
+    public static void main(String[] args) {
+        String input1 = JOptionPane.showInputDialog("Ingresa el primer número:");
+        double numero1 = Double.parseDouble(input1);
+
+        String input2 = JOptionPane.showInputDialog("Ingresa el segundo número:");
+        double numero2 = Double.parseDouble(input2);
+
+        double resultado = numero1 + numero2;
+
+        JOptionPane.showMessageDialog(null, "La suma es: " + resultado);
+    }
+}
