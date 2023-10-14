@@ -6,11 +6,6 @@ Datos relacionados a progración desde primer semestre hasta el actual.
 
 ## Empezando
 
-<<<<<<< HEAD
-En este documento vamos agregar nuestro trabjo de programacion de segundo semestre
-=======
-Se agregan apuntes y datos utiles de aprendizaje en la materia de APO
->>>>>>> c506c150bbbf15eb26f6bf275fe9d04800ac7e91
 
 ### Metodos de Java
 
