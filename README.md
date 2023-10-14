@@ -312,3 +312,38 @@ catch(NumberFormatException e){
 		return factorial;
 	}
 }
+********************************************************************
+Codigo de If and Else
+public class Taller {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner (System.in);
+		byte dia=sc.nextByte();
+		if (dia==1) {
+			System.out.print("El día es Lunes");
+			}
+		else if (dia==2) {
+			System.out.print("El día es Martes");
+			}
+		else if (dia==3) {
+			System.out.print("El día es Miercoles");
+			}
+		else if (dia==4) {
+			System.out.print("El día es Jueves");
+			}
+		else if (dia==5) {
+			System.out.print("El día es Viernes");
+			}
+		else if (dia==6) {
+			System.out.print("El día es Sábado");
+			}
+		else if (dia==7) {
+			System.out.print("El día es Domingo");
+			}
+		else if (dia>7){
+			System.out.print("El día no existe");
+			}
+	}
+
+}
