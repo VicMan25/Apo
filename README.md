@@ -6,80 +6,188 @@ Trabajos básicos con funciones, y bases de ciclos.
 
 ## Empezando
 
-Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para fines de desarrollo y prueba. Consulte implementación para obtener notas sobre cómo implementar el proyecto en un sistema en vivo.
+Se agregan apuntes y datos utiles de aprendizaje en la materia de APO
 
-### Requisitos previos
+### Metodos de Java
 
-Qué cosas necesitas para instalar el software y cómo instalarlas
+/**
+ * Clase que representa un rango de edad para la encuesta
+ * @class RangoEdad
+ */
+public class RangoEdad {
+/**
+ * Atributos
+ */
+	
+	/**
+	 * Cantidad de opiniones hechas por solteros en este rango de edad
+	 */
+	private int numeroSolteros;
+	/**
+	 * Cantidad de opiniones hechas por casados en este rango de edad
+	 */
+	private int numeroCasados;
+	
+	
+	/**
+	 * Suma de las opiniones hechas por gente soltera en este rango de edad
+	 */
+	private int totalOpinionSolteros;
+	/**
+	 * Suma de las opiniones hechas por gente casada en este rango de edad
+	 */
+	private int totalOpinionCasados;
+	
+	
+	/**
+	 * Edad mínima para este rango de edad de la población
+	 */
+	private int edadMinima;
+	
+	/**
+	 * Edad máxima para este rango de edad de la población
+	 */
+	private int edadMaxima;
+	
+	/**
+	 * @method RangoEdad
+	 * Construye el rango de encuestas.
+	 * La edad mínima y máxima fueron inicializados con los valores de los parámetros,
+	 * estos son inicializados en 0
+	 * @param pEdadMinima Edad mínima para este rango.
+	 * @param pEdadMaxima Edad máxima para este rango.
+	 */
+	public RangoEdad(int pEdadMinima, int pEdadMaxima) {
+		this.numeroCasados=0;
+		this.numeroSolteros=0;
+		this.totalOpinionCasados=0;
+		this.totalOpinionSolteros=0;
+		this.edadMaxima=pEdadMaxima;
+		this.edadMinima=pEdadMinima;
+	}
 
-```
-Give examples
-```
+	public double DarPromedio() {
+		return (double) DarTotalOpiniones()/DarNumeroOpiniones();
+	}
+	
+	/**
+	 * Retorna la edad minima de este rango de edad
+	 * @return edad mínima de este rango de edad
+	 */
+	public int DarEdadMinima() {
+		return this.edadMinima;
+	}
+	
+	/**
+	 * Retorna la edad máxima de este rango de edad
+	 * @return edad máxima de este rango de edad
+	 */
+	public int DarEdadMaxima() {
+		return this.edadMaxima;
+	}
+	
+	/**
+	 * Retorna el promedio de las opiniones de la gente en este rango de edad
+	 * @return Promedio de opinion del curso de la encuesta en el rango de edad de la
+	 * clase considerando solo los casados.
+	 */
+	public double DarPromedioCasados() {
+		return (double) this.totalOpinionCasados/this.numeroCasados;
+	}
+	
+	/**
+	 * Retorna el promedio de las opiniones de la gente en este rango de edad
+	 * @return Promedio de opinion del curso de la encuesta en el rango de edad de la
+	 * clase considerando solo los solteros.
+	 */
+	public double DarPromedioSolteros() {
+		return (double) this.totalOpinionSolteros/this.numeroSolteros;
+	}
+	
+	/**
+	 * Retorna la suma de opiniones hechas para este rango
+	 * @return DarTotalOpiniones
+	 * Da el total de opiniones del curso
+	 */
+	public int DarTotalOpiniones() {
+		return this.totalOpinionCasados+this.totalOpinionSolteros;
+	}
+	
+	/**
+	 * Retorna el número de opiniones hechas para este rango
+	 * @return DarNumerosOpiniones
+	 * Cantidad total de opiniones
+	 */
+	public int DarNumeroOpiniones() {
+		return numeroCasados+numeroSolteros;
+	}
+	
+	/**
+	 * Retorna el numero de personas casadasque respondieron la encuesta en este rango
+	 * de edad
+	 * @return Numero de personas casadas
+	 */
+	public int DarNumeroCasados() {
+		return this.numeroCasados;
+	}
+	
+	/**
+	 * Retorna el numero de personas casadasque respondieron la encuesta en este rango
+	 * de edad
+	 * @return Numero de personas solteras
+	 */
+	public int DarNumeroSolteros() {
+		return this.numeroSolteros;
+	}
+	
+	/**
+	 * Retorna el numero total de opiniones de los encuestados casados en este rango de edad
+	 * @return Numero total de opiniones de los casados
+	 */
+	public int DarTotalOpinionesCasados() {
+		return this.totalOpinionCasados;
+	}
+	
+	/**
+	 * Retorna el numero total de opiniones de los encuestados casados en este rango de edad
+	 * @return Numero total de opiniones de los solteros
+	 */
+	public int DarTotalOpinionesSolteros() {
+		return this.totalOpinionSolteros;
+	}
+	
+	/**
+	 * Retorna una cadena de texto con la edad mínima y edad máxima
+	 * @return Cadena de caracteres con el rango de edad
+	 */
+	public String DarRangoEdad() {
+		return "El rango de edad es: "+this.edadMinima+" a "+(this.edadMaxima-1); 
+	}
+	
+	/**
+	 * Agrega una opinion de una persona soltera para este rango de edad.  <br>
+	 * Post: se agrega una nueva opinion
+	 * @param pOpinion  Opinión del encuestado
+	 * pOpinion >= 0 && pOpinion < 11. 
+	 */
+	public void AgregarOpinionSoltero(int pOpinion) {
+		// this.numeroSolteros = this.numeroSolteros+1;
+		this.numeroSolteros += 1;
+		// this.totalOpinionSolteros = this.totalOpinionSolteros+1;
+		this.totalOpinionSolteros += pOpinion;
+	}
+	
+	/**
+	 * Agrega una opinion de una persona casada para este rango de edad.  <br>
+	 * Post: se agrega una nueva opinion
+	 * @param pOpinion  Opinión del encuestado
+	 * pOpinion >= 0 && pOpinion < 11. 
+	 */
+	public void AgregarOpinionCasado(int pOpinion) {
+		// this.numeroCasados = this.numeroCasados+1;
+		this.numeroCasados += 1;
+		// this.totalOpinionCasados = this.totalOpinionCasados+1;
+		this.totalOpinionCasados += pOpinion;
+	}
+}
 
-### Instalación
-
-Una serie de ejemplos paso a paso que le indican cómo ejecutar un entorno de desarrollo.
-
-Di cuál será el paso.
-
-```
-Give the example
-```
-
-Y repetir
-
-```
-until finished
-```
-
-Termine con un ejemplo de cómo sacar algunos datos del sistema o usarlos para una pequeña demostración.
-
-## Ejecutando las pruebas
-
-Explicar cómo ejecutar las pruebas automatizadas para este sistema.
-
-### Dividir en pruebas de principio a fin
-
-Explique qué prueban estas pruebas y por qué.
-
-```
-Give an example
-```
-
-### Y pruebas de estilo de codificación.
-
-Explique qué prueban estas pruebas y por qué.
-
-```
-Give an example
-```
-
-## Despliegue (Deployment)
-
-Agregue notas adicionales sobre cómo implementar esto en un sistema en vivo
-
-
-## Construido con
-
-Dropwizard : el marco web utilizado
-Maven - Gestión de dependencias
-ROMA : se utiliza para generar canales RSS
-
-## Versionado
-
-Usamos Git para el control de versiones. Para conocer las versiones disponibles, consulte las etiquetas en este repositorio .
-
-## Autores
-
-* **Gustavo Sánchez** 
-
-
-## Licencia
-
-Este proyecto tiene la licencia MIT; consulte el archivo LICENSE.md para obtener más detalles.
-
-## Expresiones de gratitud (Acknowledgments)
-
-* Un consejo para cualquiera cuyo código se haya utilizado
-* Inspiración
-* etc
