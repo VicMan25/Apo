@@ -407,3 +407,280 @@ public class ProductoNumeros {
         JOptionPane.showMessageDialog(null, "El producto de los números es: " + producto);
     }
 }
+****************************************************************
+Codigo de Factorial Con Try and Catch
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	int opcion = 0;	
+	
+while(opcion!=2) {
+try {
+	opcion=Integer.parseInt(JOptionPane.showInputDialog(null, "Selecciona la opción a realizar \n Opción 1: Factorial \n Opción 2: Salir \n","Bienvenido al menú",1));
+}
+catch(NumberFormatException e){
+	JOptionPane.showMessageDialog(null, "Elige entre 1 y 2\n", null, 1);
+}
+	switch (opcion) {
+	case 1:
+	try {
+	int x=Integer.parseInt(JOptionPane.showInputDialog(null, "Escribe un número: \n"));
+	if (x>=0) {
+		int x1=calcularFactorial(x);
+		
+				JOptionPane.showMessageDialog(null, "El valor factorial de "+ x + " es: "+ x1 + "\n", null, 1);
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "El valor factorial de "+ x + " no es posible de calcular \n", null, 1);
+			}
+			}catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Ingresa un número entero", null, 0);
+			}
+			break;
+			case 2:
+				JOptionPane.showMessageDialog(null, "Gracias por usar este menú \n", null, 1);
+			break;
+			default: 
+			JOptionPane.showMessageDialog(null, "Opción invalida \n", null, 0);
+			}
+		}
+
+	}
+	public static int calcularFactorial (int x) {
+		int factorial = 1;
+		for (int i = 1; i <= x; i++) {
+	    factorial *= i;
+	    }
+		return factorial;
+	}
+}
+********************************************************************
+Codigo de If and Else
+public class Taller {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner (System.in);
+		byte dia=sc.nextByte();
+		if (dia==1) {
+			System.out.print("El día es Lunes");
+			}
+		else if (dia==2) {
+			System.out.print("El día es Martes");
+			}
+		else if (dia==3) {
+			System.out.print("El día es Miercoles");
+			}
+		else if (dia==4) {
+			System.out.print("El día es Jueves");
+			}
+		else if (dia==5) {
+			System.out.print("El día es Viernes");
+			}
+		else if (dia==6) {
+			System.out.print("El día es Sábado");
+			}
+		else if (dia==7) {
+			System.out.print("El día es Domingo");
+			}
+		else if (dia>7){
+			System.out.print("El día no existe");
+			}
+	}
+
+}
+*********************************************************
+Tabla con While
+public class Tabla {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.print("¿Necesitas la tabla del número? \n");
+		Scanner sc = new Scanner (System.in);
+		int numero=sc.nextInt();
+		int x=1;
+		
+while(x <= 10) {
+	int resultado= numero*x;
+	System.out.print(numero + " x " + x + " = " + resultado + "\n");
+	x++;
+}
+}
+}
+*********************************************************************
+Conversor De Pesos a Dolares
+public class Conversor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.print("Ingresa el valor en pesos a convertir en dolares:");
+		Scanner sc= new Scanner (System.in);
+		double pesos=sc.nextDouble();
+		
+		double dolares=0;
+		dolares=(pesos/4150);
+		System.out.print("El valor en dolares es: "+dolares);
+	}
+}
+************************************************************************
+Condicional es par o no
+public class Condicional {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner (System.in);
+		double numero=sc.nextDouble();
+		if (numero==0) {
+			System.out.print("El número es 0");
+			}
+		else if (numero%2==0) {
+		System.out.print("Es par");
+		}
+		else {
+		System.out.print("Es impar");
+		}
+	}
+}
+********************************************************************
+Uso del JOp
+public class Main {
+	public static void main(String[]args)
+	{
+		String mensaje = JOptionPane.showInputDialog(null, "Introduce tu nombre");
+		// Para recibir números se tiene que tranformar el tipo de variable a entero.
+		// 
+		int suma=0;
+		int suma1=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el primer número"));
+		JOptionPane.showMessageDialog(null, mensaje,"Se acabo tu tiempo", 0);
+	}
+}
+**************************************************************************
+Uso de las Funciones
+public class Funciones {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double x=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el primer número"));
+		double y=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el segundo número"));
+		
+		double x1=suma(x,y);
+		double x2=resta(x,y);
+		double x3=multiplicacion(x,y);
+		double x4=division(x,y);
+		JOptionPane.showMessageDialog(null,"Suma es igual a: "+x1+ "\n","Resultado",1);
+		JOptionPane.showMessageDialog(null,"Resta es igual a: "+x2+ "\n","Resultado",1);
+		JOptionPane.showMessageDialog(null,"Multiplicación es igual a: "+x3+ "\n","Resultado",1);
+		JOptionPane.showMessageDialog(null,"División es igual a: "+x4+ "\n","Resultado",1);
+	}
+	
+	public static double suma (double a, double b) {
+			return a+b;
+	}
+	public static double resta (double a, double b) {
+			return a-b;
+	}
+	public static double multiplicacion (double a, double b) {
+		return a*b;
+	}
+	public static double division (double a, double b) {
+		return a/b;
+	}
+}
+**************************************************************************
+Contenedoras en Java
+public class Contenedora1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	int totalNotas= Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el número de notas: "));
+	double notas [] = new double [totalNotas];
+	
+	JOptionPane.showMessageDialog(null, "Ingresa tus notas");
+	
+	notas[0]=Double.parseDouble(JOptionPane.showInputDialog(null, "Ingresa la nota 1: "));
+	notas[1]=Double.parseDouble(JOptionPane.showInputDialog(null, "Ingresa la nota 2: "));
+	notas[2]=Double.parseDouble(JOptionPane.showInputDialog(null, "Ingresa la nota 3: "));
+	
+	double suma=0;
+	double promedio;
+	suma=notas[0]+notas[1]+notas[2];
+	promedio=suma/3;
+	
+	if (promedio<=29)
+		JOptionPane.showMessageDialog(null, "Repobraste, tu promedio es: "+promedio,"Promedio", 0);
+	else
+		JOptionPane.showMessageDialog(null, "Aprobaste, tu promedio es: "+promedio,"Promedio", 15);
+	}
+}
+***************************************************************************
+Menu Con While
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	Scanner sc = new Scanner (System.in);
+		byte opcion=0;
+		
+while(opcion!=6) {
+	
+	System.out.print("Ingresa tu función a realizar:\n Opción 1: Conversor de pesos\n Opción 2: Promedio de notas \n Opción 3: Clasificación de equipos \n Opción 4: Número Par o Impar\n");
+	opcion=sc.nextByte();
+switch (opcion) {
+case 1:
+	System.out.print("Ingresa el valor en pesos a convertir en dolares: \n");
+	Scanner sc1= new Scanner (System.in);
+	double pesos=sc1.nextDouble();
+	double dolares=0;
+	dolares=(pesos/4150);
+	System.out.print("El valor en dolares es: "+dolares);
+break;
+
+case 2:
+	System.out.print("Ingrese la nota 1 \n");
+	Scanner sc2= new Scanner (System.in);
+	float nota1=sc2.nextFloat();
+	System.out.print("Ingrese la nota 2 \n");
+	Scanner sc3= new Scanner (System.in);
+	float nota2=sc3.nextFloat();
+	System.out.print("Ingrese la nota 3 \n");
+	Scanner sc4= new Scanner (System.in);
+	float nota3=sc4.nextFloat();
+	double promedio=0;
+	promedio=(nota1+nota2+nota3)/3;
+	System.out.print("El promedio del estudiante es"+ promedio);
+break;
+	
+case 3:
+	System.out.print("Ingresa el número de partidos ganados \n");
+	Scanner sc5= new Scanner (System.in);
+	float pGanados=sc5.nextFloat();
+	System.out.print("Ingresa el número de partidos empatados \n");
+	Scanner sc6= new Scanner (System.in);
+	float pEmpatados=sc6.nextFloat();
+	int totalPuntos=0;
+	totalPuntos=(int) ((pGanados*3)+(pEmpatados*1));
+	System.out.print("El total de puntos del equipo son "+ totalPuntos);
+break;
+
+case 4:
+	System.out.print("Ingresa tu número para saber si es par, impar o 0 \n ");
+	Scanner sc7= new Scanner (System.in);
+	int numero=sc7.nextInt();
+	if (numero==0) {
+		System.out.print("El número es 0 \n");
+		}
+	else if (numero%2==0) {
+	System.out.print("Es par \n");	}
+	else {
+	System.out.print("Es impar \n");}
+break;
+
+case 5:
+	System.out.print("Gracias por usar este menú \n ");
+
+default: 
+	System.out.print("Este número no es valido \n");
+}
+}
+}
