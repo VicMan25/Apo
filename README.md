@@ -265,3 +265,27 @@ public class Consecutivos {
 	}
 }
 }
+
+import java.util.Scanner;
+
+public class PromedioNotas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingresa la primera nota: ");
+        double nota1 = scanner.nextDouble();
+        
+        System.out.println("Ingresa la segunda nota: ");
+        double nota2 = scanner.nextDouble();
+        
+        System.out.println("Ingresa la tercera nota: ");
+        double nota3 = scanner.nextDouble();
+        
+        // Calcula el promedio
+        double promedio = (nota1 + nota2 + nota3) / 3.0;
+        
+        System.out.println("El promedio de las tres notas es: " + promedio);
+        
+        scanner.close(); // Cerrar el Scanner al finalizar
+    }
+}
