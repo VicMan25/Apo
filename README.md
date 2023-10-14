@@ -222,4 +222,4 @@ public class CalculadoraSimple {
 
         JOptionPane.showMessageDialog(null, "La suma es: " + resultado);
     }
-}
+} 
