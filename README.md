@@ -259,6 +259,9 @@ public class Consecutivos {
 	}
 }
 }
+
+
+
 ****************************************************************
 Codigo de Factorial Con Try and Catch
 	public static void main(String[] args) {
