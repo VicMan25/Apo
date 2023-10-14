@@ -446,3 +446,29 @@ public class Funciones {
 		return a/b;
 	}
 }
+**************************************************************************
+Contenedoras en Java
+public class Contenedora1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	int totalNotas= Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el número de notas: "));
+	double notas [] = new double [totalNotas];
+	
+	JOptionPane.showMessageDialog(null, "Ingresa tus notas");
+	
+	notas[0]=Double.parseDouble(JOptionPane.showInputDialog(null, "Ingresa la nota 1: "));
+	notas[1]=Double.parseDouble(JOptionPane.showInputDialog(null, "Ingresa la nota 2: "));
+	notas[2]=Double.parseDouble(JOptionPane.showInputDialog(null, "Ingresa la nota 3: "));
+	
+	double suma=0;
+	double promedio;
+	suma=notas[0]+notas[1]+notas[2];
+	promedio=suma/3;
+	
+	if (promedio<=29)
+		JOptionPane.showMessageDialog(null, "Repobraste, tu promedio es: "+promedio,"Promedio", 0);
+	else
+		JOptionPane.showMessageDialog(null, "Aprobaste, tu promedio es: "+promedio,"Promedio", 15);
+	}
+}
