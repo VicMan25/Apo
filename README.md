@@ -381,3 +381,22 @@ public class Conversor {
 		System.out.print("El valor en dolares es: "+dolares);
 	}
 }
+************************************************************************
+Condicional es par o no
+public class Condicional {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner (System.in);
+		double numero=sc.nextDouble();
+		if (numero==0) {
+			System.out.print("El número es 0");
+			}
+		else if (numero%2==0) {
+		System.out.print("Es par");
+		}
+		else {
+		System.out.print("Es impar");
+		}
+	}
+}
