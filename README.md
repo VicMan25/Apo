@@ -326,3 +326,47 @@ public class AnalisisNumeros {
         JOptionPane.showMessageDialog(null, resultado);
 	}	
 }
+
+public class Menu_Parcial_C1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner (System.in);
+			int opcion=0;
+while(opcion!=3) {
+		System.out.print("Bienvenido al menú\n");
+		
+		System.out.print("Selecciona la opción a realizar \n");
+		System.out.print("Opción 1: Pedir números hasta que sea 0 y sumarlos \n");
+		System.out.print("Opción 2: Pedir 10 números y promediarlos \n");
+		System.out.print("Opción 3: Salir \n");
+		opcion=sc.nextInt();
+	switch (opcion) {
+	case 1:
+		System.out.print("Ingresa diferentes números, para sumarlos digita 0: \n");
+		int numeros = 1;
+		int suma= 0;
+	while (numeros !=0) {
+		System.out.print("Ingresa un número: \n");
+		numeros=sc.nextInt();
+		suma=suma+numeros;
+		}
+	System.out.print("El total de la suma es:" + suma +"\n");
+	break;
+	case 2:
+		System.out.print("Ingresa 10 números para promediarlos: \n");
+		double promedio=0;
+		for (int i=0; i<10; i++) {
+		System.out.print("Ingresa un número: \n");
+		double nume=0;
+		nume=sc.nextInt();
+		promedio=promedio+nume;
+		}
+		System.out.print("El promedio es:" + promedio/10 +"\n");
+	break;
+	default: 
+		System.out.print("Gracias por usar este menú \n");
+	}
+	}
+	}
+}
