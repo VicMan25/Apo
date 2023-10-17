@@ -1,0 +1,14 @@
+Uso de las Funciones
+public class Funciones {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double x=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el primer número"));
+		double y=Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el segundo número"));
+		
+		double x1=suma(x,y);
+		double x2=resta(x,y);
+		double x3=multiplicacion(x,y);
+		double x4=division(x,y);
+		JOptionPane.showMessageDialog(null,"Suma es igual a: "+x1+ "\n","Resultado",1);
