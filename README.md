@@ -2,7 +2,7 @@
 
 # Datos de Apo1 - Apo2
 
-Datos relacionados a progración desde primer semestre hasta el actual.
+Datos relacionados a programación desde primer semestre hasta el actual.
 
 ## Empezando
 
