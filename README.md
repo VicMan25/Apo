@@ -21,7 +21,9 @@ java script
 
 ## Autores
 
-* **Valentina Alvarez** **Carlos Andres Quenan** **Victor Manuel Velasquez**
+* **Valentina Alvarez**
+* * **Carlos Andres Quenan**
+* * **Victor Manuel Velasquez**
 
 ## Expresiones de gratitud 
 profes <3
