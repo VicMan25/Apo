@@ -3,6 +3,28 @@
 # Datos de Apo1 - Apo2
 
 Datos relacionados a programación desde primer semestre hasta el actual.
+### Requisitos previos
+
+Tener en mi dispositivo eclipse, dentro de la aplicacion se puede instalar java
+
+## Ejecutando las pruebas
+
+Hasta el momento estoy ejecutando mis programas con JOption
+
+### Y pruebas de estilo de codificación.
+
+Estoy aprendiendo a programar desde 0
+
+## Versionado
+
+java script
+
+## Autores
+
+* **Valentina Alvarez** **Carlos Andres Quenan** **Victor Manuel Velasquez**
+
+## Expresiones de gratitud 
+profes <3
 
 ## Empezando
 
