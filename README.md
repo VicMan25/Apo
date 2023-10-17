@@ -32,12 +32,9 @@ Todos estos trabajos son básicos, así que se pueden previsualizar desde una co
 
 Todos estos códigos han sido provados en diferentes ocasiones, y se garantiza su funcionalidad.
 
-```
 Ejemplo: 
 
 ![ImagenEjemplo2](https://i.ibb.co/1rHnDHG/captura-2.jpg))
-
-```
 
 ## Despliegue (Deployment)
 
