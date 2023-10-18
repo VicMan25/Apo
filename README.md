@@ -22,7 +22,7 @@ Al igual que las extensiones de:
 Para la ejecución de los códigos, se observa en la interfaz de Eclipse la opción de Run para ejecutarlos o tambien con la combinación de teclas Crtl+F11.
 Como se indica en el ejemplo: 
 
-https://i.ibb.co/ynW9fLj/captura-1.jpg
+![ImagenEjemplo](https://i.ibb.co/ynW9fLj/captura-1.jpg))
 
 ## Ejecutando las pruebas
 
@@ -32,12 +32,9 @@ Todos estos trabajos son básicos, así que se pueden previsualizar desde una co
 
 Todos estos códigos han sido provados en diferentes ocasiones, y se garantiza su funcionalidad.
 
-```
 Ejemplo: 
 
-https://i.ibb.co/1rHnDHG/captura-2.jpg
-
-```
+![ImagenEjemplo2](https://i.ibb.co/1rHnDHG/captura-2.jpg))
 
 ## Despliegue (Deployment)
 
